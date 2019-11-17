@@ -1,4 +1,4 @@
-package com.base.camping.campground;
+package com.base.camping.campground.model;
 import lombok.Data;
 import javax.persistence.Column;
 import javax.persistence.Entity;
