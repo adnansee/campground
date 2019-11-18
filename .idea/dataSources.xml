@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="campdb1.1@localhost" uuid="e779482f-721f-4dbd-b8ad-e902b2e7f22d">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/campdb1.1</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="DPRtQG6wbb@remotemysql.com" uuid="244383d3-cbc2-440a-93f9-a8772586b44a">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://remotemysql.com:3306/DPRtQG6wbb</jdbc-url>
+    </data-source>
+  </component>
+</project>
