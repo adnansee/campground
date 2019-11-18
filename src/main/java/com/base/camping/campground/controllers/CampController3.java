@@ -61,6 +61,12 @@ public class CampController3 {
         return new ResponseEntity<Campgrounds>(campgrounds, HttpStatus.OK);
     }
 
+    /**
+     * final
+     * @return
+     */
+
+
     @RequestMapping(method = RequestMethod.GET, value = "getall")
     public ResponseEntity<List<Campgrounds>> getAllCampGrounds() {
         List<Campgrounds> campgrounds = (List<Campgrounds>) campGroundService.getAllCampGrounds();
