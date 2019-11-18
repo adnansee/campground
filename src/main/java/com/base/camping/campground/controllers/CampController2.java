@@ -6,7 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+/**
+ * final
+ * @return
+ * really
+ */
 //@RestController
 //@RequestMapping("/")
 public class CampController2 {

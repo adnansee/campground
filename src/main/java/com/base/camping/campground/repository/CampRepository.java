@@ -8,3 +8,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CampRepository extends CrudRepository<Campgrounds, Integer> {
 }
+/**
+ * final
+ * @return
+ * really
+ */

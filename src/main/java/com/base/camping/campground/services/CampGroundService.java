@@ -22,13 +22,13 @@ public class CampGroundService {
 
     public void enterCampGround(Campgrounds campGrounds) {
         crep.save(campGrounds);
-        }
+    }
+
     public void deleteCampGround(Campgrounds campgrounds) {
         crep.delete(campgrounds);
     }
 
-    public Iterable<Campgrounds> getAllCampWithLocation(String location) {
-        crep.findAll();
+    public Iterable<Campgrounds> getAllCampWithLocation(String location) {crep.findAll();
         return null;
     }
 
@@ -38,7 +38,6 @@ public class CampGroundService {
      *
      *
      */
-
 
 
 }
