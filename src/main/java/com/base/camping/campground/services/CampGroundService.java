@@ -5,6 +5,8 @@ import com.base.camping.campground.repository.CampRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CampGroundService {
 
@@ -32,6 +34,9 @@ public class CampGroundService {
         return null;
     }
 
+    public void enterCampGrounds(List<Campgrounds> campGrounds) {
+        crep.saveAll(campGrounds);
+    }
     /**
      * SEARCH BY AREA
      * SEARCH BY PRICE
