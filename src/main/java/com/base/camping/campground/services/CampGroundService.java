@@ -16,8 +16,8 @@ public class CampGroundService {
         return crep.findAll();
     }
 
-    public Campgrounds giveOneCampGround(Integer integer) {
-        return crep.findById(integer).get();
+    public Iterable<Campgrounds> giveOneCampGround(Integer integer) {
+        return (Iterable<Campgrounds>) crep.findById(integer).get();
     }
 
     public void enterCampGround(Campgrounds campGrounds) {
