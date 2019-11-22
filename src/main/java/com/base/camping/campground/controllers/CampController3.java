@@ -29,7 +29,7 @@ public class CampController3 {
 
     @RequestMapping(value = "/delc/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Void> deleteCampGround(@PathVariable("id") int id) {
-        Campgrounds campgrounds = (Campgrounds) campGroundService.giveOneCampGround(id);
+        Campgrounds campgrounds = campGroundService.giveOneCampGround(id);
         if (campgrounds == null) {
 
             return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
@@ -52,7 +52,7 @@ public class CampController3 {
 
     @RequestMapping(value = "/giveone/{id}", method = RequestMethod.GET)
     public ResponseEntity<Campgrounds> getCampGround(@PathVariable("id") int id) {
-        Campgrounds campgrounds = (Campgrounds) campGroundService.giveOneCampGround(id);
+        Campgrounds campgrounds = campGroundService.giveOneCampGround(id);
         if (campgrounds == null) {
 
             return new ResponseEntity<Campgrounds>(HttpStatus.NOT_FOUND);
