@@ -64,9 +64,9 @@ public class CampController3 {
     }
     @RequestMapping(method = RequestMethod.POST,  value = "/addall")
     @PostMapping
-    public ResponseEntity<Campgrounds> addCampGrounds(@RequestBody List<Campgrounds> campgrounds) {
+    public ResponseEntity<List<Campgrounds>> addCampGrounds(@RequestBody List<Campgrounds> campgrounds) {
         campGroundService.enterCampGrounds(campgrounds);
-        return new ResponseEntity<Campgrounds>(campgrounds, HttpStatus.CREATED);
+        return new ResponseEntity<List<Campgrounds>>(campgrounds, HttpStatus.CREATED);
     }
 
 

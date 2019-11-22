@@ -30,8 +30,8 @@ public class CampGroundService {
         crep.delete(campgrounds);
     }
 
-    public Iterable<Campgrounds> getAllCampWithLocation(String location) {crep.findAll();
-        return null;
+    public Iterable<Campgrounds> getAllCampWithLocation(String location) {
+        return crep.findAll();
     }
 
     public void enterCampGrounds(List<Campgrounds> campGrounds) {
