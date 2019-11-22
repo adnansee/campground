@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
@@ -30,12 +29,12 @@ public class CampController3 {
 
     @RequestMapping(value = "/delc/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Void> deleteCampGround(@PathVariable("id") int id) {
-        List<Campgrounds> campgrounds = campGroundService.giveOneCampGround(id);
+        Campgrounds campgrounds = campGroundService.giveOneCampGround(id);
         if (campgrounds == null) {
 
             return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
         } else {
-            campGroundService.deleteCampGround(campgrounds.get(0));
+            campGroundService.deleteCampGround(campgrounds);
 
             return new ResponseEntity<Void>(HttpStatus.GONE);
         }
@@ -53,13 +52,13 @@ public class CampController3 {
 
     @RequestMapping(value = "/giveone/{id}", method = RequestMethod.GET)
     public ResponseEntity<Campgrounds> getCampGround(@PathVariable("id") int id) {
-        List<Campgrounds> campgrounds = campGroundService.giveOneCampGround(id);
+        Campgrounds campgrounds = campGroundService.giveOneCampGround(id);
         if (campgrounds == null) {
 
             return new ResponseEntity<Campgrounds>(HttpStatus.NOT_FOUND);
         }
 
-        return new ResponseEntity<Campgrounds>((Campgrounds) campgrounds, HttpStatus.OK);
+        return new ResponseEntity<Campgrounds>(campgrounds, HttpStatus.OK);
     }
 
     /**

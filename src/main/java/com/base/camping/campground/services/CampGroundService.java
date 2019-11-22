@@ -5,9 +5,6 @@ import com.base.camping.campground.repository.CampRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Service
 public class CampGroundService {
 
@@ -19,11 +16,8 @@ public class CampGroundService {
         return crep.findAll();
     }
 
-    public List<Campgrounds> giveOneCampGround(Integer integer) {
-        Campgrounds onecamp = crep.findById(integer).get();
-        List<Campgrounds> campgrounds = new ArrayList<>();
-        campgrounds.add(onecamp);
-        return campgrounds;
+    public Campgrounds giveOneCampGround(Integer integer) {
+        return crep.findById(integer).get();
     }
 
     public void enterCampGround(Campgrounds campGrounds) {
