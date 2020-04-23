@@ -37,12 +37,35 @@ public class CampGroundService {
     public void enterCampGrounds(List<Campgrounds> campGrounds) {
         crep.saveAll(campGrounds);
     }
-    /**
-     * SEARCH BY AREA
-     * SEARCH BY PRICE
-     *
-     *
-     */
+
+    public List<Campgrounds> findByLocationCampGrounds(String location) {
+        return crep.findCampGroundsByLocation(location);
+    }
+
+    public List<Campgrounds> findBySize(int size) {
+        return  crep.findCampGroundBySize(size);
+    }
 
 
+    public List<Campgrounds> findByPeopleSize(int size) {
+        return crep.findCampGroundByPeople(size);
+    }
+
+    public List<Campgrounds> findByPrice(int price) {
+        return crep.findCampGroundByPrice(price);
+    }
+
+    public List<Campgrounds> findByMaxdays(int days) {
+    return crep.findCampGroundByMaxdays(days);
+    }
+
+    public List<Campgrounds> findBetweenPrice(int priceLarger, int priceSmaller){
+return crep.findCampGroundByPriceBetween(priceLarger, priceSmaller);
+
+
+    }
+    public List<Campgrounds> findBetweenSize(int sizeBigger, int sizeSmaller){
+        return crep.findCampGroundBySizeBetween(sizeBigger, sizeSmaller);
+
+}
 }

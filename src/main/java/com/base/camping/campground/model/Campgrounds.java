@@ -10,7 +10,7 @@ import javax.persistence.Id;
  * really
  */
 @Data
-@Entity
+@Entity(name = "campgrounds")
 public class Campgrounds {
 
     public Campgrounds() {
@@ -19,30 +19,30 @@ public class Campgrounds {
     @Id
     @GeneratedValue
     private int id;
-    @Column(name = "name")
+    @Column(name = "name")      //NAME
     private String name;
-    @Column(name = "location")
+    @Column(name = "location")  //LOCATION
     private String location;
-    @Column(name = "size")
+    @Column(name = "size")      //SIZE
     private int size;
-    @Column(name = "people")
+    @Column(name = "people")    //SIZE
     private int people;
-    @Column(name = "maxdays")
+    @Column(name = "maxdays")   //MAXDAYS
     private int maxdays;
-    @Column(name = "toilet")
+    @Column(name = "toilet")    //TOILET
     private String toilet;
-    @Column(name = "fire")
+    @Column(name = "fire")      //FIRE
     private String fire;
-    @Column(name = "pic")
+    @Column(name = "pic")       //PIC
     private String pic;
-    @Column(name = "email")
+    @Column(name = "email")     //EMAIL
     private String email;
-    @Column(name = "description")
+    @Column(name = "description")   //DESCRIPTION
     private String description;
-    @Column(name = "price")
+    @Column(name = "price")     //PRICE
     private int price;
-    @Column(name = "vehicle")
+    @Column(name = "vehicle")   //VEHICLE
     private String vehicle;
-    @Column(name = "review")
+    @Column(name = "review")    //REVIEW
     private String review;
 }
